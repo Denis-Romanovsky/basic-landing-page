@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/utilities' as *;
+@use '../abstracts/mixins' as *;
+
+header {
+  background-color: $clr-primary-700;
+  // height: 75vh;
+  position: relative;
+
+
+  .nav-container {
+    margin-inline: $clm-mg-inline;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+    @include breakpoint(sm) {
+      max-width: 1420px;
+      margin-inline: auto;
+      padding-inline: 3rem;
+      // margin: 0 4%;
+    }
+  }
+}
+
+.container {
+
+}
+
+.nav {
+  padding-block: 1rem;
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__link {
+    color: $clr-primary-300;
+  }
+
+  &__mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    &__logo {
+      width: 35px;
+      height: 35px;
+      fill: #fff;
+      margin-bottom: .2rem;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

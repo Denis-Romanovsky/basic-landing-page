@@ -1,0 +1,19 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use '../base/typography' as *;
+
+.heading-primary {
+  color: $clr-primary-100;
+  font-size: $fs-700;
+  // font-size: clamp(2.5rem, 6vw, $fs-700);
+  font-size: clamp(2.5rem, 6vw, 54px);
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  letter-spacing: -.25px;
+
+  @include breakpoint(sm) {
+    font-size: clamp(2.625rem, 6vw, 54px);
+    max-width: 18ch;
+  }
+}

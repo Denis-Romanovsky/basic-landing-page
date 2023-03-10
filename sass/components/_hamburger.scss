@@ -1,0 +1,32 @@
+/* button one */
+
+.button-one {
+  --button-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.button-one .line {
+  transition: .5s;
+  transform-origin: center;
+}
+
+.button-one[aria-expanded="true"] .line {
+  transition: .5s;
+}
+
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.button-one[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.button-one[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}

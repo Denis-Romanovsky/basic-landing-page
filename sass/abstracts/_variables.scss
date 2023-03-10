@@ -1,0 +1,29 @@
+// Colors
+$clr-primary-700: hsl(214, 23%, 18%); // #1F2937;
+$clr-primary-300: #E5E7EB;
+$clr-primary-100: #F9FAF8;
+
+$clr-secondary: #3882F6;
+
+/*
+
+  600px - 37.5em, 700px - 43.75em
+  800px = 50em, 900px - 56.25em
+  1200px - 75em, 1300px - 81.25em
+  1540px - 96.25em
+
+*/
+
+// Breakpoints
+// $bp-sm: 56.25em;
+// $bp-md: 1250px;
+// $bp-lg: 40rem;
+// $bp-xl: 96.25em;
+
+$bp-sm: 43.75em;
+$bp-md: 1250px;
+$bp-lg: 40rem;
+$bp-xl: 96.25em;
+
+// Clamp values
+$clm-mg-inline: clamp(1.5rem, 6vw, 3rem);

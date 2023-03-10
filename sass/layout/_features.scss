@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography' as *;
+@use '../abstracts/mixins' as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 2rem;
+  text-align: center;
+
+  & .container {
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      width: 90vw;
+    }
+  }
+
+  &__heading {
+    font-size: $fs-500;
+    font-weight: 700;
+    padding-block: 7rem;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+
+    display: grid;
+
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    }
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr)
+    }
+  }
+
+  &__item {
+    // border: 1px solid black;
+    padding-block: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+  }
+
+  &__icon {
+    width: 40px;
+    margin-bottom: 2rem;
+
+
+    @include breakpoint(sm) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__description {
+    color: $clr-primary-700;
+    font-size: clamp(1rem, 3.25vw, $fs-300);
+    line-height: 1.35;
+  }
+
+
+}

@@ -1,0 +1,58 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../base/typography' as *;
+
+.hero {
+  // margin-inline: $clm-mg-inline;
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  gap: 4rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding-block: 5rem;
+
+  @include breakpoint(sm) {
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 10rem;
+  }
+
+  &__text {
+    color: $clr-primary-300;
+    max-width: 75ch;
+    line-height: 1.35;
+    font-size: clamp(1rem, 5vw, $fs-300);
+    margin-bottom: 1rem;
+  }
+
+  &__image-box {
+    justify-self: center;
+    @include breakpoint(sm) {
+      justify-self: end;
+    }
+  }
+
+  &__img {
+    // display: block;
+    // flex-basis: 10%;
+    // flex-shrink: 2;
+    width: clamp(200px, 49vw, 300px);
+    // width: 100%;
+    // height: 250px;
+    // max-width: 35vw;
+
+    // width: clamp(21vw, 49vw, 36vw);
+    // width: clamp(42vw, 49vw, 30vw);
+
+    // @include breakpoint(sm) {
+    //   width: 50%;
+    // }
+
+    @include breakpoint(sm) {
+      width: clamp(6rem, 49vw, 34vw);
+    }
+  }
+}

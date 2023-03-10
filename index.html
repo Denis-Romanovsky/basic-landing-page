@@ -5,7 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="nav-container">
+        <nav class="nav">
+          <div class="nav__mobile">
+            <img class="nav__mobile__logo" src="/images/logo.svg" alt="Website logo" />
+
+            <button class="button-one" aria-controls="primary-navigation" aria-expanded="false">
+              <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="45">
+                <rect class="line top" width="80" height="8" x="10" y="30" rx="5"></rect>
+                <rect class="line middle" width="80" height="8" x="10" y="50" rx="5"></rect>
+                <rect class="line bottom" width="80" height="8" x="10" y="70" rx="5"></rect>
+              </svg>
+            </button>
+          </div>
+
+          <div class="nav__desktop">
+            <img class="nav__mobile__logo" src="/images/logo.svg" alt="Website logo" />
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="hero">
+          <div class="hero__text-box">
+            <h1 class="heading-primary">This Website Is Awesome</h1>
+            <p class="hero__text">
+              This website has some subtext that goes here under the main title. It's a smaller font
+              and the color is lower contrast
+            </p>
+
+            <button class="btn btn__hero">Sign Up</button>
+          </div>
+
+          <div class="hero__image-box">
+            <img src="/images/hero_illustration.svg" class="hero__img" alt="Hero Image" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="features">
+        <div class="container">
+          <h2 class="features__heading">Some random information</h2>
+          <div class="features__block">
+            <div class="features__item">
+              <img src="/images/clock.svg" alt="Clock" class="features__icon" />
+              <div class="features__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laboriosam.
+              </div>
+            </div>
+
+            <div class="features__item">
+              <img src="/images/world.svg" alt="World" class="features__icon" />
+              <div class="features__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laboriosam.
+              </div>
+            </div>
+
+            <div class="features__item">
+              <img src="/images/credit-card.svg" alt="Credit Card" class="features__icon" />
+              <div class="features__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laboriosam.
+              </div>
+            </div>
+
+            <div class="features__item">
+              <img src="/images/users-alt.svg" alt="Users" class="features__icon" />
+              <div class="features__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laboriosam.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
 </html>
